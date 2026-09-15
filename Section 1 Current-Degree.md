@@ -28,4 +28,4 @@ The curriculum analysed in this report is the **JNTUH R22 B.Tech. Computer Scien
 
 **URL:** https://jntuh.ac.in/uploads/academics/R22B.Tech.CSECourseStructureSyllabus2.pdf
 
-**Date downloaded/accessed:** [12 September 2026]
+**Date downloaded/accessed:** 12 September 2026
