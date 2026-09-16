@@ -15,6 +15,7 @@ However, the job description expects practical exposure to **LLMs, RAG, AI agent
 **Gap:** Practical exposure to Generative AI, RAG, AI agents, AI-assisted development, REST APIs and modern cloud-based application development should be strengthened.
 
 **Job description:** CloudPulse Technologies, *AI-Native Software Developer – Fresher*, Hyderabad. Accessed September 2026.
+https://in.jooble.org/jdp/-9011696924850031453
 
 ## 5.2 Associate Software Engineer – TriNet
 
@@ -29,6 +30,7 @@ However, the job expects candidates to connect these fundamentals with **Generat
 **Gap:** The transition from traditional software engineering to Generative AI, RAG, AI-agent development and AI-assisted development is not sufficiently explicit in the R22 curriculum.
 
 **Job description:** TriNet, *Associate Software Engineer*, Hyderabad. Accessed September 2026.
+https://builtin.com/job/associate-software-engineer/11076185
 
 ## 5.3 Associate Software Engineer – Scout It Out
 
@@ -43,6 +45,7 @@ The job description therefore shows considerable alignment between the R22 curri
 **Gap:** More integrated practical development, testing, debugging, framework-based application development and industry-style software workflows would improve alignment.
 
 **Job description:** Scout It Out, *Associate Software Engineer*, Hyderabad. Accessed September 2026.
+https://www.foundit.in/job/associate-software-engineer-scout-it-out-hyderabad-secunderabad-telangana-48652950
 
 ## 5.4 What the Three Job Descriptions Show
 
