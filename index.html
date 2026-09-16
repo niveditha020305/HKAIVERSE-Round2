@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2030 CSE Curriculum Redesign</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 32px 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 1100px;
+      margin: 25px auto;
+      padding: 0 16px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 15px;
+      color: #4b5563;
+    }
+    .card p {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    select, input {
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .table-container {
+      overflow-x: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+    }
+    th {
+      background: #e8eefc;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>2030 CSE Curriculum Redesign</h1>
+    <p>Curriculum Intelligence Challenge | JNTUH CSE</p>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h3>Total Curriculum Credits</h3>
+        <p id="totalCredits">160</p>
+      </div>
+      <div class="card">
+        <h3>Number of Semesters</h3>
+        <p>8</p>
+      </div>
+      <div class="card">
+        <h3>Target Redesign Range</h3>
+        <p>20–25%</p>
+      </div>
+      <div class="card">
+        <h3>Target Redesign Credits</h3>
+        <p>32–40</p>
+      </div>
+    </section>
+
+    <section class="controls">
+      <select id="semesterFilter">
+        <option value="all">All Semesters</option>
+        <option value="I-I">I-I</option>
+        <option value="I-II">I-II</option>
+        <option value="II-I">II-I</option>
+        <option value="II-II">II-II</option>
+        <option value="III-I">III-I</option>
+        <option value="III-II">III-II</option>
+        <option value="IV-I">IV-I</option>
+        <option value="IV-II">IV-II</option>
+      </select>
+
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Foundation">Foundation</option>
+        <option value="Programming">Programming</option>
+        <option value="AI">AI and Data</option>
+        <option value="Systems">Systems</option>
+        <option value="Security">Security</option>
+        <option value="Project">Project and Practice</option>
+      </select>
+
+      <input id="searchBox" type="text" placeholder="Search a subject...">
+    </section>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Semester</th>
+            <th>Course</th>
+            <th>Credits</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody id="curriculumBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    Prepared for the HKAIVERSE Curriculum Intelligence Challenge
+  </footer>
+
+  <script>
+    const courses = [
+      ["I-I", "Matrices and Calculus", 4, "Foundation"],
+      ["I-I", "Engineering Chemistry", 3, "Foundation"],
+      ["I-I", "Programming for Problem Solving", 3, "Programming"],
+      ["I-I", "Basic Electrical Engineering", 2, "Foundation"],
+      ["I-I", "Engineering Graphics", 1, "Foundation"],
+      ["I-I", "Elements of Computer Science and Engineering", 1, "Foundation"],
+      ["I-I", "Programming for Problem Solving Laboratory", 1, "Programming"],
+      ["I-I", "Computing Foundations Laboratory", 2, "Programming"],
+      ["I-I", "Data and AI Literacy", 2, "AI"],
+      ["I-I", "Basic Electrical Engineering Lab", 1, "Foundation"],
+
+      ["I-II", "Ordinary Differential Equations and Vector Calculus", 4, "Foundation"],
+      ["I-II", "Applied Physics", 4, "Foundation"],
+      ["I-II", "Engineering Workshop", 1.5, "Foundation"],
+      ["I-II", "English for Skill Enhancement", 2, "Foundation"],
+      ["I-II", "Electronic Devices and Circuits", 2, "Foundation"],
+      ["I-II", "Python Programming Laboratory", 2, "Programming"],
+      ["I-II", "Applied Physics Laboratory", 1.5, "Foundation"],
+      ["I-II", "English Language and Communication Skills Lab", 1, "Foundation"],
+      ["I-II", "IT Workshop", 1, "Programming"],
+      ["I-II", "Data and AI Literacy", 1, "AI"],
+
+      ["II-I", "Digital Electronics", 2, "Systems"],
+      ["II-I", "Data Structures", 3, "Programming"],
+      ["II-I", "Computer Oriented Statistical Methods", 4, "Foundation"],
+      ["II-I", "Computer Organization and Architecture", 3, "Systems"],
+      ["II-I", "Object Oriented Programming through Java", 3, "Programming"],
+      ["II-I", "Data Structures Laboratory", 1.5, "Programming"],
+      ["II-I", "OOP Java Laboratory", 1.5, "Programming"],
+      ["II-I", "Data Analytics and Visualization", 2, "AI"],
+
+      ["II-II", "Discrete Mathematics", 3, "Foundation"],
+      ["II-II", "Business Economics and Financial Analysis", 2, "Foundation"],
+      ["II-II", "Operating Systems", 3, "Systems"],
+      ["II-II", "Database Management Systems", 3, "Systems"],
+      ["II-II", "Software Engineering", 2, "Programming"],
+      ["II-II", "Operating Systems Laboratory", 1, "Systems"],
+      ["II-II", "Database Management Systems Laboratory", 1, "Systems"],
+      ["II-II", "Full Stack Development", 3, "Programming"],
+      ["II-II", "Software Engineering Practice Laboratory", 1, "Project"],
+      ["II-II", "Real-time Research/Societal Related Project", 1, "Project"],
+
+      ["III-I", "Design and Analysis of Algorithms", 4, "Programming"],
+      ["III-I", "Computer Networks", 3, "Systems"],
+      ["III-I", "DevOps Theory", 2, "Programming"],
+      ["III-I", "DevOps Practical Laboratory", 2, "Project"],
+      ["III-I", "Generative AI and LLM Systems", 3, "AI"],
+      ["III-I", "Professional Elective I", 3, "Programming"],
+      ["III-I", "Computer Networks Laboratory", 1, "Systems"],
+      ["III-I", "Advanced English Communication Skills Lab", 1, "Foundation"],
+      ["III-I", "UI Design – Flutter", 1, "Programming"],
+
+      ["III-II", "Machine Learning", 3, "AI"],
+      ["III-II", "Formal Languages and Automata Theory", 3, "Foundation"],
+      ["III-II", "Artificial Intelligence", 3, "AI"],
+      ["III-II", "Deep Learning", 3, "AI"],
+      ["III-II", "Open Elective I", 3, "Programming"],
+      ["III-II", "Machine Learning Laboratory", 1, "AI"],
+      ["III-II", "Artificial Intelligence Laboratory", 1, "AI"],
+      ["III-II", "Deep Learning Laboratory", 1, "AI"],
+      ["III-II", "AI and Data Engineering", 2, "AI"],
+
+      ["IV-I", "Cryptography and Network Security", 3, "Security"],
+      ["IV-I", "Compiler Design", 3, "Systems"],
+      ["IV-I", "Cyber Security", 3, "Security"],
+      ["IV-I", "Cyber Security Laboratory", 1, "Security"],
+      ["IV-I", "Professional Elective V", 3, "Programming"],
+      ["IV-I", "Open Elective II", 3, "Programming"],
+      ["IV-I", "Cryptography and Network Security Laboratory", 1, "Security"],
+      ["IV-I", "Compiler Design Laboratory", 1, "Systems"],
+      ["IV-I", "Project Stage-I", 2, "Project"],
+
+      ["IV-II", "Organizational Behavior", 1, "Foundation"],
+      ["IV-II", "Professional Elective VI", 3, "Programming"],
+      ["IV-II", "Open Elective III", 3, "Programming"],
+      ["IV-II", "Project Stage-II including Seminar", 10, "Project"],
+      ["IV-II", "AI Deployment and MLOps", 2, "AI"],
+      ["IV-II", "Open Source and Industry Practice", 1, "Project"]
+    ];
+
+    const semesterFilter = document.getElementById("semesterFilter");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const searchBox = document.getElementById("searchBox");
+    const body = document.getElementById("curriculumBody");
+
+    function renderTable() {
+      const semester = semesterFilter.value;
+      const category = categoryFilter.value;
+      const search = searchBox.value.toLowerCase().trim();
+
+      const filtered = courses.filter(course => {
+        const matchesSemester = semester === "all" || course[0] === semester;
+        const matchesCategory = category === "all" || course[3] === category;
+        const matchesSearch = course[1].toLowerCase().includes(search);
+        return matchesSemester && matchesCategory && matchesSearch;
+      });
+
+      body.innerHTML = "";
+
+      filtered.forEach(course => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${course[0]}</td>
+          <td>${course[1]}</td>
+          <td>${course[2]}</td>
+          <td>${course[3]}</td>
+        `;
+        body.appendChild(row);
+      });
+
+      if (filtered.length === 0) {
+        body.innerHTML = '<tr><td colspan="4">No matching courses found.</td></tr>';
+      }
+    }
+
+    semesterFilter.addEventListener("change", renderTable);
+    categoryFilter.addEventListener("change", renderTable);
+    searchBox.addEventListener("input", renderTable);
+
+    renderTable();
+  </script>
+</body>
+</html>
