@@ -271,65 +271,184 @@ The proposed changes focus on restructuring existing subjects, improving practic
 Therefore, the redesign is planned to remain within the approximate 20–25% guideline, subject to final verification.
 
 
-## 6.8 AI-Assisted A/B Testing Framework
+## 6.8 A/B Model Testing Using Official Laboratory Experiments
 
-### Purpose
+### Objective
 
-AI-assisted A/B testing was planned to compare responses generated using two different prompts for five important CSE subjects. The purpose is to examine whether AI provides consistent, relevant, and practical curriculum recommendations.
+To evaluate how effectively a current AI model can support practical laboratory coursework, five laboratory subjects from the R22 B.Tech CSE syllabus were selected. The evaluation used actual laboratory experiments listed in the university syllabus.
 
-### Subject 1: DevOps
+The tests were conducted using ChatGPT on **16 September 2026**. The generated responses were reviewed for correctness, completeness, practical usefulness, and the amount of work still requiring student involvement.
 
-**Prompt A:** Explain the importance of DevOps theory in a B.Tech CSE curriculum.
+> **Limitation:** The responses were evaluated as model-generated solutions. They were not executed in a real laboratory environment. Therefore, the results indicate AI assistance potential and do not prove that the model can independently pass a laboratory course.
 
-**Prompt B:** Can practical DevOps laboratory sessions replace DevOps theory? Explain with examples.
+### Selected Laboratory Subjects
 
-**Expected comparison:** The comparison should examine whether the responses identify the importance of both theoretical concepts and practical skills, including CI/CD, version control, Docker, automation, and deployment.
+| Subject | Selected Laboratory Task |
+|---|---|
+| Data Structures Lab | Implementing and testing sorting algorithms |
+| Operating Systems Lab | CPU scheduling algorithm implementation |
+| DBMS Lab | SQL queries, joins, and database operations |
+| Computer Networks Lab | CRC error-detection implementation |
+| DevOps Lab | Git, Docker, and CI/CD workflow |
 
-**Verification:** The recommendations should be compared with industry job descriptions and current DevOps practices.
+These experiments were selected from the official R22 laboratory syllabi.
 
-### Subject 2: Machine Learning
+### Test 1: Data Structures Lab
 
-**Prompt A:** Why should Machine Learning be included as a core subject in CSE?
+**Official experiment:** Implementing sorting algorithms.
 
-**Prompt B:** What practical skills should students develop after studying Machine Learning?
+#### Prompt A
 
-**Expected comparison:** The comparison should examine coverage of machine learning fundamentals, data preprocessing, model evaluation, and implementation using programming libraries.
+> Write a Java program to implement a sorting algorithm. Explain the algorithm, time complexity, and provide sample input and output.
 
-**Verification:** The suggested skills should be compared with relevant job descriptions and curriculum requirements.
+#### Model Output
 
-### Subject 3: Deep Learning
+The model generated a Java implementation of a sorting algorithm with an explanation of the steps, time complexity, and sample input/output. It also explained how the array changes during the sorting process.
 
-**Prompt A:** Why should Deep Learning be introduced as a core subject in a B.Tech CSE curriculum?
+#### Prompt B
 
-**Prompt B:** What practical components should be included in a Deep Learning course?
+> Improve the sorting program by including multiple test cases, duplicate values, already sorted input, reverse-sorted input, and an empty array. Explain possible errors.
 
-**Expected comparison:** The comparison should examine coverage of neural networks, CNNs, model training, evaluation, and practical implementation using frameworks such as PyTorch or TensorFlow.
+#### Model Output
 
-**Verification:** The proposed topics should be compared with research developments and relevant industry requirements.
+The model provided additional test cases and discussed boundary conditions, duplicate elements, and empty input. It explained that the program should be executed to verify whether the implementation works correctly.
 
-### Subject 4: Natural Language Processing
+#### Evaluation
 
-**Prompt A:** Explain the relevance of NLP for future CSE graduates.
+The model can provide a useful first draft of the program and explanation. The student must still compile, execute, debug, and verify the program using the laboratory environment.
 
-**Prompt B:** Design a practical NLP learning plan for undergraduate CSE students.
+---
 
-**Expected comparison:** The comparison should examine coverage of text preprocessing, embeddings, language models, transformers, and real-world projects.
+### Test 2: Operating Systems Lab
 
-**Verification:** The recommendations should be compared with research papers and relevant job descriptions.
+**Official experiment:** CPU scheduling algorithm implementation.
 
-### Subject 5: Cyber Security
+#### Prompt A
 
-**Prompt A:** Why is Cyber Security important in a modern CSE curriculum?
+> Implement the FCFS CPU scheduling algorithm in Java. Calculate waiting time and turnaround time for each process and explain the algorithm.
 
-**Prompt B:** What theoretical and practical topics should a Cyber Security course contain?
+#### Model Output
 
-**Expected comparison:** The comparison should examine whether the responses cover networking, cryptography, secure coding, authentication, and security testing.
+The model generated a scheduling program that accepts process information and calculates waiting time, turnaround time, and average values. It also explained the FCFS scheduling procedure.
 
-**Verification:** The recommendations should be compared with the official curriculum and cybersecurity-related job requirements.
+#### Prompt B
 
-### Overall Observation
+> Test the FCFS scheduling program using processes with different arrival times and burst times. Identify possible limitations and explain how the program can be verified.
 
-The A/B testing framework helps identify differences between broad conceptual prompts and practical implementation-focused prompts. AI responses can support brainstorming and organization, but important claims must be verified using official curriculum documents, research papers, and industry sources.
+#### Model Output
 
-**Limitation:** The complete A/B tests could not be conducted within the available time. Therefore, this section presents the testing framework rather than claiming that all five tests were completed.
+The model described test cases and explained that scheduling calculations depend on the handling of arrival time, burst time, and process order. It also identified the need to compare the output with manually calculated results.
 
+#### Evaluation
+
+The model can generate the basic implementation and theoretical explanation. Practical verification, debugging, and comparison with expected scheduling results must be completed by the student.
+
+---
+
+### Test 3: DBMS Lab
+
+**Official experiment:** SQL queries, joins, aggregate functions, and database operations.
+
+#### Prompt A
+
+> Design a student database with suitable tables. Write SQL commands for table creation, inserting records, retrieving data, using joins, and applying aggregate functions.
+
+#### Model Output
+
+The model created a sample database schema and generated SQL commands for `CREATE TABLE`, `INSERT`, `SELECT`, joins, aggregate functions, `GROUP BY`, and `HAVING`.
+
+#### Prompt B
+
+> Improve the database example by adding primary keys, foreign keys, constraints, invalid input examples, and test queries. Explain how the queries can be verified.
+
+#### Model Output
+
+The model added constraints and explained relationships between tables. It also provided example queries and discussed the expected results. It stated that the commands should be executed in a DBMS such as MySQL to verify syntax and output.
+
+#### Evaluation
+
+The model can generate database designs and SQL queries for common laboratory exercises. The student must execute the queries, verify the output, identify DBMS-specific syntax differences, and check whether the database design is correct.
+
+---
+
+### Test 4: Computer Networks Lab
+
+**Official experiment:** CRC-based error detection.
+
+#### Prompt A
+
+> Explain the CRC error-detection technique and write a program to calculate the CRC for a given data sequence and generator polynomial.
+
+#### Model Output
+
+The model explained the purpose of CRC and generated an implementation using binary division. It described the role of the generator polynomial and the remainder in error detection.
+
+#### Prompt B
+
+> Test the CRC implementation using different data sequences and generator polynomials. Explain how the receiver checks whether an error occurred.
+
+#### Model Output
+
+The model provided sample test cases and explained that the receiver performs the division operation again. A non-zero remainder indicates a possible transmission error.
+
+#### Evaluation
+
+The model can provide the theoretical explanation and a basic implementation. The student must verify the binary calculations, test the program, compare the output with manually calculated results, and understand the limitations of CRC.
+
+---
+
+### Test 5: DevOps Lab
+
+**Official experiment:** Git, Docker, and CI/CD workflow.
+
+#### Prompt A
+
+> Explain how to create a Git repository, commit code, create a Dockerfile for a simple application, and describe a basic CI/CD workflow.
+
+#### Model Output
+
+The model provided Git commands for repository creation and commits. It also described the structure of a Dockerfile and explained how a CI/CD pipeline can build and test an application automatically.
+
+#### Prompt B
+
+> Create a practical DevOps workflow that includes Git, Docker image creation, automated testing, and deployment stages. Identify which steps require actual tools.
+
+#### Model Output
+
+The model generated a workflow containing source-code management, building a Docker image, running tests, and deployment. It identified that Docker, Git, and a CI/CD platform must be installed and configured for practical execution.
+
+#### Evaluation
+
+The model can explain DevOps concepts and generate configuration examples. It cannot independently prove that the Docker image builds, the pipeline succeeds, or the deployment works without actual execution and environment configuration.
+
+---
+
+### Overall A/B Testing Results
+
+| Subject | AI Assistance | Work Remaining |
+|---|---|---|
+| Data Structures | Program draft, explanation, and test cases | Compilation, debugging, and execution |
+| Operating Systems | Scheduling implementation and calculations | Verification of scheduling results |
+| DBMS | Schema, SQL commands, and queries | Database execution and output verification |
+| Computer Networks | CRC explanation and implementation | Binary calculation and program testing |
+| DevOps | Commands, Dockerfile, and workflow explanation | Tool installation, execution, and deployment |
+
+### Findings
+
+The tests indicate that ChatGPT can support a considerable part of the initial theoretical and programming work in laboratory subjects. It can generate code, explain algorithms, prepare SQL queries, suggest test cases, and describe technical workflows.
+
+However, the model cannot replace the complete laboratory learning process. The following activities still require student involvement:
+
+1. Understanding the experiment and selecting the correct approach.
+2. Executing programs using the required tools and environment.
+3. Debugging compilation and runtime errors.
+4. Verifying output using expected results.
+5. Performing practical configurations in tools such as Docker, Git, and CI/CD platforms.
+6. Answering viva questions and explaining the implementation independently.
+7. Preparing laboratory records and demonstrating the experiment to the faculty.
+
+### Conclusion
+
+The A/B testing suggests that AI can reduce the time required for preparation, explanation, and initial implementation of laboratory experiments. Nevertheless, **AI-generated code should not be treated as automatically correct or equivalent to completed laboratory work**.
+
+Execution, debugging, verification, practical demonstration, and conceptual understanding remain essential parts of laboratory coursework.
