@@ -257,3 +257,67 @@ The redesign is intended to remain within the assignment's approximate 20–25% 
 The central design principle is:
 
 > Preserve foundational Computer Science subjects while updating the practical content, modernizing tools, and introducing important AI, security, cloud, and deployment capabilities.
+
+
+## 6.8 AI-Assisted A/B Testing Framework
+
+### Purpose
+
+AI-assisted A/B testing was planned to compare responses generated using two different prompts for five important CSE subjects. The purpose is to examine whether AI provides consistent, relevant, and practical curriculum recommendations.
+
+### Subject 1: DevOps
+
+**Prompt A:** Explain the importance of DevOps theory in a B.Tech CSE curriculum.
+
+**Prompt B:** Can practical DevOps laboratory sessions replace DevOps theory? Explain with examples.
+
+**Expected comparison:** The comparison should examine whether the responses identify the importance of both theoretical concepts and practical skills, including CI/CD, version control, Docker, automation, and deployment.
+
+**Verification:** The recommendations should be compared with industry job descriptions and current DevOps practices.
+
+### Subject 2: Machine Learning
+
+**Prompt A:** Why should Machine Learning be included as a core subject in CSE?
+
+**Prompt B:** What practical skills should students develop after studying Machine Learning?
+
+**Expected comparison:** The comparison should examine coverage of machine learning fundamentals, data preprocessing, model evaluation, and implementation using programming libraries.
+
+**Verification:** The suggested skills should be compared with relevant job descriptions and curriculum requirements.
+
+### Subject 3: Deep Learning
+
+**Prompt A:** Why should Deep Learning be introduced as a core subject in a B.Tech CSE curriculum?
+
+**Prompt B:** What practical components should be included in a Deep Learning course?
+
+**Expected comparison:** The comparison should examine coverage of neural networks, CNNs, model training, evaluation, and practical implementation using frameworks such as PyTorch or TensorFlow.
+
+**Verification:** The proposed topics should be compared with research developments and relevant industry requirements.
+
+### Subject 4: Natural Language Processing
+
+**Prompt A:** Explain the relevance of NLP for future CSE graduates.
+
+**Prompt B:** Design a practical NLP learning plan for undergraduate CSE students.
+
+**Expected comparison:** The comparison should examine coverage of text preprocessing, embeddings, language models, transformers, and real-world projects.
+
+**Verification:** The recommendations should be compared with research papers and relevant job descriptions.
+
+### Subject 5: Cyber Security
+
+**Prompt A:** Why is Cyber Security important in a modern CSE curriculum?
+
+**Prompt B:** What theoretical and practical topics should a Cyber Security course contain?
+
+**Expected comparison:** The comparison should examine whether the responses cover networking, cryptography, secure coding, authentication, and security testing.
+
+**Verification:** The recommendations should be compared with the official curriculum and cybersecurity-related job requirements.
+
+### Overall Observation
+
+The A/B testing framework helps identify differences between broad conceptual prompts and practical implementation-focused prompts. AI responses can support brainstorming and organization, but important claims must be verified using official curriculum documents, research papers, and industry sources.
+
+**Limitation:** The complete A/B tests could not be conducted within the available time. Therefore, this section presents the testing framework rather than claiming that all five tests were completed.
+
