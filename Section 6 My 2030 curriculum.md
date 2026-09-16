@@ -70,14 +70,14 @@ These changes do not simply increase the total number of credits. They restructu
 | --------------------------------------------------- | ------: |
 | Ordinary Differential Equations and Vector Calculus |       4 |
 | Applied Physics                                     |       4 |
-| Engineering Workshop                                |     2.5 |
+| Engineering Workshop                                |     1.5 |
 | English for Skill Enhancement                       |       2 |
 | Electronic Devices and Circuits                     |       2 |
 | Python Programming Laboratory                       |       2 |
 | Applied Physics Laboratory                          |     1.5 |
 | English Language and Communication Skills Lab       |       1 |
 | IT Workshop                                         |       1 |
-| Data and AI Literacy                                |       2 |
+| Data and AI Literacy                                |       1 |
 | **Total**                                           |  **20** |
 
 **Change:** Data and AI Literacy is continued to provide early exposure to data handling, AI concepts, responsible AI, and basic computational thinking.
