@@ -258,6 +258,18 @@ The central design principle is:
 
 > Preserve foundational Computer Science subjects while updating the practical content, modernizing tools, and introducing important AI, security, cloud, and deployment capabilities.
 
+### Redesign Percentage
+
+The proposed curriculum contains 160 credits. The approximate redesign target is calculated as follows:
+
+- Total curriculum credits: 160
+- Target redesign range: 20–25%
+- Equivalent redesign range: 32–40 credits
+
+The proposed changes focus on restructuring existing subjects, improving practical components, and introducing industry-oriented learning. The exact redesigned credit count requires a detailed subject-by-subject comparison to avoid counting overlapping changes more than once.
+
+Therefore, the redesign is planned to remain within the approximate 20–25% guideline, subject to final verification.
+
 
 ## 6.8 AI-Assisted A/B Testing Framework
 
