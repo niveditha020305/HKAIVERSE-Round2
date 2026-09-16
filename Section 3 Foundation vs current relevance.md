@@ -57,11 +57,15 @@
 
 The following 12 labels were selected because the R22 syllabus provides specific evidence through its units, textbooks, tools and credit structure. The recommendations distinguish between subjects whose foundations should remain and subjects whose content or curriculum weight should change.
 
-#### 1. CS503PC + CS505PC – DevOps + DevOps Lab — KEEP
+#### 1. CS503PC + CS505PC – DevOps + DevOps Lab — UPDATE
 
-The R22 curriculum allocates 3 credits to DevOps and 1 credit to its laboratory. The subject covers important concepts such as DevOps lifecycle, source-code management, Git servers, Docker, Jenkins, automated testing and deployment. However, the prescribed textbook, Joakim Verona's *Practical DevOps* (2016), and parts of Unit V rely on tools such as Puppet, Ansible, Chef and Salt Stack. Kubernetes, Terraform and GitHub Actions/GitLab CI are not included.
+The R22 curriculum allocates 3 credits to DevOps theory and 1 credit to its laboratory, giving a total of 4 credits. The subject covers important concepts such as the DevOps lifecycle, source-code management, Git servers, Docker, Jenkins, automated testing and deployment.
 
-Therefore, the **subject should be kept with its full 4 credits, but its toolset should be modernized**. Reducing it to a 1-credit skill course, as done in the JNTUH R25 constituent-colleges curriculum, would reduce the opportunity for students to learn CI/CD, containers and infrastructure automation in depth. The better approach is to retain the credit weight and replace older deployment tools with Kubernetes, Terraform and modern CI/CD platforms.
+However, some prescribed tools and practices require modernization. The curriculum should provide stronger hands-on experience with modern CI/CD platforms, container orchestration, infrastructure automation and cloud deployment.
+
+Therefore, the subject should be retained with its total 4 credits but its credit distribution should be updated. The proposed redesign changes the structure from 3 theory credits and 1 laboratory credit to 2 theory credits and 2 practical credits.
+
+The additional practical emphasis will allow students to gain more experience with GitHub Actions or GitLab CI, Docker, Kubernetes, Terraform, automated testing and cloud deployment. This approach maintains the importance of DevOps while improving practical and industry-oriented learning.
 
 #### 2. CS601PC – Machine Learning — UPDATE
 
@@ -79,14 +83,15 @@ These foundations remain valuable, so the course should not be replaced. However
 
 The course should therefore be updated by retaining classical AI foundations while adding a modern AI unit covering concepts such as attention, LLMs, prompting, RAG and evaluation of generative AI systems.
 
-#### 4. CS303PC – Computer Oriented Statistical Methods — KEEP
+#### 4. CS303PC – Computer Oriented Statistical Methods — UPDATE
 
-Unlike some other subjects, the statistical content in R22 remains strongly relevant to modern computing and Machine Learning. Unit I includes Bayes' Rule; Units II and III cover probability distributions and sampling; Unit IV covers hypothesis testing; and Unit V covers Markov chains and stochastic processes.
+The R22 syllabus covers important statistical foundations, including Bayes' Rule, probability distributions, sampling, hypothesis testing, Markov chains and stochastic processes. These topics support later subjects such as Machine Learning, Bayesian models and Hidden Markov Models.
 
-These topics directly support concepts used later in CS601PC Machine Learning, including Bayesian models, HMMs and stochastic processes. Therefore, the course should be **KEPT rather than reduced or substantially rewritten**.
+However, the course can be improved by connecting theoretical concepts with practical computing and modern data analysis. The syllabus should include Python-based statistical programming, exploratory data analysis, statistical visualizations, model evaluation and practical applications related to machine learning.
 
-The main issue is not its content but sequencing. R25 places Machine Learning in the same semester as this statistics course, whereas the R22 structure gives students time to study statistics before Machine Learning. The R22 sequence therefore provides a stronger prerequisite relationship.
+Therefore, the subject should be updated rather than substantially reduced or removed. The core mathematical and statistical concepts should be retained, while practical programming and data-analysis activities should be added.
 
+The proposed changes should preserve the prerequisite relationship between statistics and Machine Learning. Students should first develop the required probability and statistical foundations before applying them in advanced machine learning topics.
 #### 5. CS404PC – Database Management Systems — UPDATE
 
 The R22 DBMS syllabus focuses on relational database concepts including ER modelling, relational algebra, SQL, normalization, transactions, concurrency control and B+ tree indexing. These remain essential foundations.
